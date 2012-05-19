@@ -6,17 +6,17 @@ WARN_FLAGS = -Wall -Wextra -Werror
 INC_FLAG = -I inc
 
 CPP_FILES = $(wildcard src/*.cpp)
-OBJ_FILES = $(addprefix bin/obj/, $(notdir $(CPP_FILES:.cpp=.o)))
+OBJ_FILES = $(addprefix bin/, $(notdir $(CPP_FILES:.cpp=.o)))
 
-LD_FLAGS = -o bin/$(OUT_FILE)
+LD_FLAGS = -o $(OUT_FILE)
 CC_FLAGS = -I inc -Wall -Wextra -Werror -c
 
 ## Rules ##
 all: $(OBJ_FILES)
 	$(CPP) $(LD_FLAGS) $^
 
-bin/obj/%.o: src/%.cpp
+bin/%.o: src/%.cpp
 	$(CPP) $(CC_FLAGS) -o $@ $<
 
 clean:
-	rm -f bin/obj*.o bin/out.run
+	rm -f bin/*.o *.out

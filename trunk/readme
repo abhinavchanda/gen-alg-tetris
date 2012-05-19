@@ -30,7 +30,6 @@ Note:  See the docs folder for more information
 
 Structure Tree
 ├── bin -> houses all object files for linking and executables
-│   └── obj
 ├── dat -> contains resources for the program (images, files, etc.)
 ├── doc -> stores project documentation
 ├── inc -> place for all header files to go
