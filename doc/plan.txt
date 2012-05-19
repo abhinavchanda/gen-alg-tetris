@@ -1,3 +1,38 @@
 
-This file outlines the main components of the program being made.
+This file outlines the main components and some issues to consider of the program being made.
 
+////////////
+// Tetris //
+////////////
+
+First, this will be built standalone
+	Input Handler will read from keyboard
+	Only output will be to Display Manager
+
+Game Logic:
+	Threading and dealing with concurrency
+	How often it should read from Input Handler
+	How often it should write to Game State
+
+Input Handler:
+	What it will actually accept as input
+	How it will tell Game Logic what the commands are
+
+Game State:
+	Will this be a data structure or will it do some work?
+
+
+/////////////////////
+// Display Manager //
+/////////////////////
+
+First will only display in ASCII - need to find an API that can help with that
+Then this will be implemented with a graphics library (which I'll have to learn first)
+
+
+////////////////
+// Controller //
+////////////////
+
+First, this will be set up to read from the keyboard
+Then it will be adjusted to connect with Player
