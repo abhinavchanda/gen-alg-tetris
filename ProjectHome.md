@@ -1,0 +1,5 @@
+The overall structure resides in two entities: Genetic Algorithm and Tetris. Player identifies as a bridge to this gap by manifesting as a "playing behavior" (determined by Genetic Algorithm) to play Tetris. An example of a playing behavior could be that the player will choose to place long pieces on the sides instead of the center.
+
+After receiving behavior traits from Genetic Algorithm, Player continuously read from Game State, determine where each piece shall go, and then instruct Controller where to place each piece. Controller will manipulate each piece to its location by hooking into Tetris' Input Handler.
+
+Tetris will continuously read from Input Handler, update Game Logic and then update Game State. Game State will be read by Player and Display Manager. Display Manager will display an output to the screen.
